@@ -1,0 +1,41 @@
+<div class="content-box" fxLayout="column">
+    <div  fxLayout="row" fxLayoutAlign="center center">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Prestations</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Demandes</label>
+          </div>
+    </div>
+    <div style="margin: 20px;" fxLayout="row">
+        <div class="col" style="flex:0 ;">
+            <div ngbDropdown class="d-inline-block" style="width: 100%;">
+              <button type="button"  class="btn btn" style="width: 100%; border-radius: 0px; border: black solid 0.5px; color: black; background-color:rgb(235, 233, 233) ;"
+               id="dropdownBasic1" ngbDropdownToggle>Catégories</button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem>Action - 1</button>
+                <button ngbDropdownItem>Another Action</button>
+                <button ngbDropdownItem>Something else is here</button>
+              </div>
+            </div>
+        </div>
+        <div class="col" >
+            <div ngbDropdown class="d-inline-block" style="width: 100%;">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Saisissez une ville" aria-label="Username" aria-describedby="basic-addon1" ngbDropdownToggle>
+                </div>
+              <div ngbDropdownMenu  style="width: 100%;" aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem>Action - 1</button>
+                <button ngbDropdownItem>Another Action</button>
+                <button ngbDropdownItem>Something else is here</button>
+              </div>
+            </div>
+        </div>
+        <div>
+            <button fxLayout="row" type="button" class="btn btn-info"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"  ></mat-icon>Recherche</button>
+        </div>
+    </div>
+    
+</div>

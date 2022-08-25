@@ -1,0 +1,46 @@
+<div id="prestation-creation" fxLayout="column">
+    <app-profil-header></app-profil-header>
+    <div class="input-container" fxLayout="column">
+        <div class="col" >
+            <label for="name">Catégorie</label>
+            <div ngbDropdown class="d-inline-block" style="width: 100%;">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="jardinage" aria-label="Username" aria-describedby="basic-addon1" disabled="disabled">
+                </div>
+            </div>
+        </div>
+        <div class="bloc" fxLayout="column">
+            <label for="name">Titre</label>
+            <input type="text" class="form-control" placeholder="Titre" aria-label="titre" aria-describedby="basic-addon1">
+        </div>
+        <div class="bloc" fxLayout="column">
+            <label for="name">Image</label>
+            <input type="file" class="form-control" placeholder="Titre" aria-label="titre" aria-describedby="basic-addon1">
+        </div>       
+        <div class="bloc" fxLayout="column">
+            <label for="name">Prix</label>
+            <input type="number" class="form-control" placeholder="20€" aria-label="titre" aria-describedby="basic-addon1">
+        </div>
+        <div class="col bloc" >
+            <label for="name">Lieu</label>
+            <div ngbDropdown class="d-inline-block" style="width: 100%;">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Saisissez une ville" aria-label="Username" aria-describedby="basic-addon1" ngbDropdownToggle>
+                </div>
+              <div ngbDropdownMenu  style="width: 100%;" aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem>Action - 1</button>
+                <button ngbDropdownItem>Another Action</button>
+                <button ngbDropdownItem>Something else is here</button>
+              </div>
+            </div>
+        </div>
+        <div class="bloc" fxLayout="column">
+            <label for="name">description</label>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+    </div>
+    <div fxFlex fxLayoutAlign="center center" style="margin-bottom:30px ;">
+        <button type="button" class="btn btn-info" routerLink="missions" style="width:350px; font-size: 18px;">Enregistrer</button>
+    </div>
+    
+</div>

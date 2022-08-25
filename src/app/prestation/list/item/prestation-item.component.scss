@@ -1,0 +1,22 @@
+#prestation-item{
+    .item{
+        margin:  20px 10%;
+        border: 1px solid rgb(233, 229, 229)!important;
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+        .image-container{
+            img{
+                width: 250px;
+                height: 100%;
+                border-radius: 5px 0px 0px 5px;
+            }
+            
+        }
+        .title{
+            font-weight: bold;
+            font-size: 35px;
+            padding-left: 20px;
+        }
+    }
+    
+}

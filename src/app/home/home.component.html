@@ -1,0 +1,26 @@
+<div id="app-home" flLayout="column">
+    <div fxLayout="row"  >
+        <p fxFlex fxLayoutAlign="center center">Des millions de prestations pour subvenir à tous vos besoins !</p>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div>
+            <img src="../../assets/presentation/workers.svg" style="max-width: 300px; max-height:300px ; ">
+        </div>
+        <app-carousel></app-carousel>
+        <div>
+            <img src="../../assets/presentation/dude.svg" style="max-width: 300px; max-height:300px ; ">
+        </div>
+    </div>
+    <app-search-item></app-search-item>
+    <div fxLayout="column" style="margin: 0 10% ;">
+        <h1>Top préstations</h1>
+        <div fxLayout="row wrap" >
+           <app-prestation-card></app-prestation-card> 
+           <app-prestation-card></app-prestation-card> 
+           <app-prestation-card></app-prestation-card>
+           <app-prestation-card></app-prestation-card>
+           <app-prestation-card></app-prestation-card>
+          
+        </div>
+    </div>
+</div>
