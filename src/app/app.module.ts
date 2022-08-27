@@ -17,6 +17,8 @@ import { ProfilHeaderComponent } from './components/profil-header/profil-header.
 import { PrestationListComponent } from './prestation/list/prestation.list.component';
 import { PrestationItemComponent } from './prestation/list/item/prestation-item.component';
 import { ProfilComponent } from './profil/profil.component';
+import { PrestationDemandeComponent } from './prestation/demande/prestation.demande.component';
+import { PrestationDemandeItemComponent } from './prestation/demande/item/prestation.demande.item.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { ProfilComponent } from './profil/profil.component';
     PrestationListComponent,
     PrestationItemComponent,
     ProfilComponent,
+    PrestationDemandeComponent,
+    PrestationDemandeItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,10 @@ import { ProfilComponent } from './profil/profil.component';
       { 
         path: 'profil/:username', 
         component:ProfilComponent
+      },
+      { 
+        path: 'prestation/:username/demandes', 
+        component:PrestationDemandeComponent
       },
       
     ])
