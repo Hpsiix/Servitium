@@ -13,13 +13,12 @@
     </div>
     <app-search-item></app-search-item>
     <div fxLayout="column" style="margin: 0 10% ;">
-        <h1>Top préstations</h1>
-        <div fxLayout="row wrap" >
-           <app-prestation-card></app-prestation-card> 
-           <app-prestation-card></app-prestation-card> 
-           <app-prestation-card></app-prestation-card>
-           <app-prestation-card></app-prestation-card>
-           <app-prestation-card></app-prestation-card>
+        <h1>Top préstataires</h1>
+        <div style="margin-top: 20px;" fxLayout="row wrap" >
+           <app-prestation-card [code]="'plombier'"></app-prestation-card> 
+           <app-prestation-card [code]="'macon'"></app-prestation-card> 
+           <app-prestation-card [code]="'jardinier'"></app-prestation-card> 
+           <app-prestation-card [code]="'electricien'"></app-prestation-card> 
           
         </div>
     </div>
