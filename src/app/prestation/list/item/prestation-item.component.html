@@ -1,19 +1,26 @@
 <div id="prestation-item">
     <div class="item" fxLayout.gt-xs="row">
         <div class="image-container">
-            <img src="../../../../assets/presentation/pdp.webp">
+            <img [src]="image">
         </div>
         <div fxLayout="column" style="width: 100%;">
-            <div class="title">
-               jardin 1
+            <div fxLayout="row" fxFlex>
+                <div  class="title" fxLayoutAlign="start center">
+                    jardinage {{random}}
+                </div>
+                <div *ngIf="!isMission" fxFlex fxLayoutAlign="end center" style="margin-right:30px;">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" style="color:rgb(0, 119, 255); margin-right: 5px; font-size: 26px;"  ></mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" style="color:red; margin-left: 5px; font-size: 26px;"  ></mat-icon>
+                </div>
             </div>
+           
             <div class="info" fxLayout="row" >
                 <div fxLayout="column" fxLayoutAlign="start center" style="margin: 20px 20px;font-size: 22px;  width: 50%;">
                     <div>Lieu : Paris</div>
-                    <div>Terminée</div>
+                    <div *ngIf="isMission">Terminée</div>
                 </div>
                 <div style=" right: 0px; margin: 20px 20px; width: 50%;font-size: 22px;" fxLayout="column" fxLayoutAlign="end center">
-                    <div>Prix : 500 €</div> 
+                    <div>Prix : {{price}} €</div> 
                     <div style="padding: 10px 20px 0px 20px;">
                         <mat-icon  aria-hidden="false" fontIcon="star" style="width:40px ; height:30px; color: gold; font-size: 34px;"></mat-icon>
                         <mat-icon  aria-hidden="false" fontIcon="star" style="width:40px ; height:30px; color: gold; font-size: 34px;"></mat-icon>

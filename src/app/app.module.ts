@@ -19,6 +19,7 @@ import { PrestationItemComponent } from './prestation/list/item/prestation-item.
 import { ProfilComponent } from './profil/profil.component';
 import { PrestationDemandeComponent } from './prestation/demande/prestation.demande.component';
 import { PrestationDemandeItemComponent } from './prestation/demande/item/prestation.demande.item.component';
+import { PrestationAnnonceComponent } from './prestation/annonce/prestation.annonce.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { PrestationDemandeItemComponent } from './prestation/demande/item/presta
     ProfilComponent,
     PrestationDemandeComponent,
     PrestationDemandeItemComponent,
+    PrestationAnnonceComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +65,10 @@ import { PrestationDemandeItemComponent } from './prestation/demande/item/presta
       { 
         path: 'prestation/:username/demandes', 
         component:PrestationDemandeComponent
+      },
+      { 
+        path: 'prestation/:username/annonces', 
+        component:PrestationAnnonceComponent
       },
       
     ])

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-prestation-item',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prestation-item.component.scss']
 })
 export class PrestationItemComponent implements OnInit {
-
-  constructor() { }
+  @Input() isMission: boolean | undefined;
+    prices : number[] = [500,200,399,566,233,900,123,88,77,45,544,266] 
+    random:number = Math.floor(Math.random() * this.prices.length);
+    price : number | null =null;
+    images:string[] = ["../../../../assets/jardinage/j1.jpg","../../../../assets/jardinage/j2.jpg",
+    "../../../../assets/jardinage/j3.jpg","../../../../assets/jardinage/j4.jpg"] ;
+    image ="";
+    constructor() { }
 
   ngOnInit(): void {
+    this.price= this.prices[this.random];
+    this.random = Math.floor(Math.random() * this.images.length);
+    this.image = this.images[this.random];
   }
 
 }
