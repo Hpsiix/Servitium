@@ -1,5 +1,5 @@
 <div id="prestation-item">
-    <div class="item" fxLayout.gt-xs="row">
+    <div class="item" fxLayout.gt-xs="row" routerLink="/prestation/jardinage1/reservation">
         <div class="image-container">
             <img [src]="image">
         </div>
@@ -8,20 +8,31 @@
                 <div  class="title" fxLayoutAlign="start center">
                     jardinage {{random}}
                 </div>
-                <div *ngIf="!isMission" fxFlex fxLayoutAlign="end center" style="margin-right:30px;">
+                <div *ngIf="!isMission && !isClientView && !isDemande && !isSearch  " fxFlex fxLayoutAlign="end center" style="margin-right:30px;">
                     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" style="color:rgb(0, 119, 255); margin-right: 5px; font-size: 26px;"  ></mat-icon>
                     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" style="color:red; margin-left: 5px; font-size: 26px;"  ></mat-icon>
                 </div>
+                <div *ngIf="isDemande && onGoing && !isSearch " fxFlex fxLayoutAlign="end center" style="margin-right:30px;">
+                    <p (click)="onGoing=false" style="color: red; cursor: pointer;">Annuler</p>
+                </div>
             </div>
-           
+           <div>
+            <textarea disabled="disabled" style="height: 200px;" fxFlex >
+                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+            </textarea>
+           </div>
             <div class="info" fxLayout="row" >
                 <div fxLayout="column" fxLayoutAlign="start center" style="margin: 20px 20px;font-size: 22px;  width: 50%;">
                     <div>Lieu : Paris</div>
-                    <div *ngIf="isMission">Terminée</div>
+                    <div *ngIf="isMission && !isSearch ">Terminée</div>
+                    <div *ngIf="isClientView && isDone && !isSearch " style="color:green ;">Terminée</div>
+                    <div *ngIf="isClientView && !isDone" style="color:red ;">Annulée</div>
+                    <div *ngIf="isDemande  && onGoing && !isDone" style="color:green ;">acceptée</div>
+                    <div *ngIf="isDemande && !onGoing && !isDone" style="color:red ;">refusée</div>
                 </div>
                 <div style=" right: 0px; margin: 20px 20px; width: 50%;font-size: 22px;" fxLayout="column" fxLayoutAlign="end center">
                     <div>Prix : {{price}} €</div> 
-                    <div style="padding: 10px 20px 0px 20px;">
+                    <div style="padding: 10px 20px 0px 20px;" *ngIf="isMission && !isSearch  ">
                         <mat-icon  aria-hidden="false" fontIcon="star" style="width:40px ; height:30px; color: gold; font-size: 34px;"></mat-icon>
                         <mat-icon  aria-hidden="false" fontIcon="star" style="width:40px ; height:30px; color: gold; font-size: 34px;"></mat-icon>
                         <mat-icon  aria-hidden="false" fontIcon="star" style="width:40px ; height:30px; color: gold; font-size: 34px;"></mat-icon>
